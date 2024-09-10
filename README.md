@@ -108,9 +108,15 @@ To copy the output from HDFS to your local machine:
     ```bash
     hdfs dfs -get <hdfs_path> <local_path>
     ```
+    ```bash
+    hdfs dfs -get /output /opt/hadoop-3.2.1/share/hadoop/mapreduce/
+    ```
 
 2. use Docker to copy from the container to your local machine:
 
     ```bash
     docker cp <container_id>:<container_path> <local_path>
+    ```
+    ```bash
+    docker cp resourcemanager:/opt/hadoop-3.2.1/share/hadoop/mapreduce/output/ shared-folder/output/
     ```
